@@ -1,0 +1,23 @@
+{
+  "name": "gabrielsilveira.com.br",
+  "version": "1.0.0",
+  "description": "Website do profissional Gabriel Silveira, Full stack developer",
+  "main": "index.js",
+  "scripts": {
+    "dev": "forever --minUptime=1000 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-silveira/portfolio.git"
+  },
+  "author": "Gabriel Silveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-silveira/portfolio/issues"
+  },
+  "homepage": "https://github.com/gabriel-silveira/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
