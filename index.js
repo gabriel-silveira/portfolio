@@ -18,7 +18,7 @@ nunjucks.configure(PATHS.templates, {
 
 app.get('/', (req, res) => {
   res.render('./index.html', {
-    title: 'Gabriel Silveira, Desenvolvedor full stack'
+    title: 'Gabriel Silveira, Full stack developer'
   })
 })
 
