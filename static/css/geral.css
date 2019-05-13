@@ -9,7 +9,11 @@
 }
 
 body {
-  background-color: var(--purple);
+  background-color: #FFF;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 div#app {
@@ -19,40 +23,17 @@ div#app {
   height: 100%;
 }
 
-section#home {
+#social {
+  z-index: 3;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('/imgs/background.jpg');
-  background-size: 100% auto;
-  background-position: bottom center;
+  padding: 33px;
+  left: 0px;
+  top: 0px;
 }
 
-section#home h1 {
-  position: absolute;
-  width: 940px;
-  left: 50%;
-  margin-left: -470px;
-  top: 50%;
-  margin-top: -105px;
-
-  text-align: center;
-  line-height: 100%;
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 140px;
-  color: #FFF;
-  text-shadow: 5px 5px 15px rgba(255,255,255,0.5);
-}
-
-section#home #nome {
-  position: absolute;
-  width: 920px;
-  left: 50%;
-  margin-left: -460px;
-  top: 50%;
-  margin-top: -175px;
-
-  font-size: 42px;
+#social i {
+  margin-right: 25px;
+  font-size: 34px;
   color: #FFF;
 }
 

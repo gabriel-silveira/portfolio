@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <title>{{ title }}</title>
 
+    <!-- EXTERNAL -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="/css/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/hamburgers.min.css">
 
     <script src="/js/vue.min.js" charset="utf-8"></script>
-    <script src="/js/vue/home.js" defer></script>
 
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/vue/home.js" defer></script>
   </head>
   <body>
     <div id="app">
@@ -20,6 +24,12 @@
         <nav id="nav-main-menu" :class="{ active: openNav }">
 
         </nav>
+      </div>
+
+      <div id="social">
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-google-plus-g"></i>
       </div>
 
       <section id="home">
@@ -32,7 +42,7 @@
         </div>
 
         <h1>full stack developer</h1>
-        <p id="nome">Olá, meu nome é Gabriel Silveira. Eu sou um</p>
+        <p id="main-text">Hello, my name is Gabriel Silveira. I'm a</p>
       </section>
     </div>
   </body>
