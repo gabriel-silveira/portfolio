@@ -5,34 +5,17 @@ new Vue({
     openNav: false
   },
   methods: {
-    mainMenu: function() {
-      let self = this
-      var mm = document.getElementById('main-menu')
-      mm.style.display = 'block'
-      setTimeout(function() {
-        mm.classList.toggle('active')
-        document.getElementById('hamburger-icon').classList.toggle('is-active')
-        setTimeout(function() {
-          self.openNav = self.openNav ? false : true
-        }, 250)
-      }, 50)
+    toggleMenu: function() {
+      document.getElementById('hamburger-icon').classList.toggle('is-active')
+      this.openNav = this.openNav ? false : true
     },
     closeMainMenu: function() {
-      if(this.openNav) {
-        let self = this
-        var mm = document.getElementById('main-menu')
-        mm.classList.toggle('active')
-        document.getElementById('hamburger-icon').classList.toggle('is-active')
-        setTimeout(function() {
-          self.openNav = false
-          setTimeout(function() {
-            mm.style.display = 'none'
-          }, 2000)
-        }, 250)
-      }
+      if(this.openNav)
+        this.toggleMenu()
     }
   },
   mounted: function() {
+    // cria evento click fora do menu (para fechar)
     document.getElementById('main-menu').addEventListener("click", this.closeMainMenu)
     document.getElementById('nav-main-menu').addEventListener("click", function(e) {
       e.stopPropagation()

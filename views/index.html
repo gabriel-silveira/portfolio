@@ -20,8 +20,8 @@
   </head>
   <body>
     <div id="app">
-      <div id="main-menu">
-        <nav id="nav-main-menu" :class="{ active: openNav }">
+      <div id="main-menu" :class="{ active: openNav }">
+        <nav id="nav-main-menu">
 
         </nav>
       </div>
@@ -33,7 +33,7 @@
       </div>
 
       <section id="home">
-        <div id="wrapper-hamburger" @click="mainMenu()">
+        <div id="wrapper-hamburger" @click="toggleMenu()">
           <button id="hamburger-icon" class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
