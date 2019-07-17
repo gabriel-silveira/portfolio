@@ -22,7 +22,12 @@
     <div id="app">
       <div id="main-menu" :class="{ active: openNav }">
         <nav id="nav-main-menu">
-
+          <div id="menu-logo"></div>
+          <a @click="go(0)">Profile</a>
+          <a @click="go(1)">What i do</a>
+          <a @click="go(2)">Recent works</a>
+          <a @click="go(3)">Articles</a>
+          <a @click="go(4)">Let’s have a chat</a>
         </nav>
       </div>
 

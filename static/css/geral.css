@@ -1,15 +1,20 @@
 :root {
-  --purple: #3040D0;
+  --purple: #3040D0; /* rgb(48, 64, 208) */
 }
 
 * {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 body {
   background-color: #FFF;
+}
+
+a {
+  cursor: pointer;
 }
 
 button::-moz-focus-inner {
@@ -60,7 +65,7 @@ div#app {
   transition: all 0.5s;
 }
 #main-menu.active {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.65);
 }
 #nav-main-menu {
   z-index: 2;
@@ -69,9 +74,26 @@ div#app {
   right: -400px;
   width: 400px;
   height: 100%;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(48, 64, 208, 0.9);
   transition: all 0.7s ease;
 }
 #main-menu.active #nav-main-menu {
   right: 0px;
+}
+#nav-main-menu #menu-logo {
+  height: 100px;
+}
+#nav-main-menu a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 1px 0px;
+  background-color: var(--purple);
+  color: #FFF;
+  transition: all 0.3s;
+}
+#nav-main-menu a:hover {
+  padding: 15px 15px 15px 25px;
+  background-color: rgba(255,255,255,0.25);
+  color: #FFF;
 }

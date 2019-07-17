@@ -2,7 +2,8 @@ new Vue({
   delimiters: ['[[',']]'],
   el: '#app',
   data: {
-    openNav: false
+    openNav: false,
+    sections: ['profile', 'what-i-do', 'recent-works', 'articles', 'contact']
   },
   methods: {
     toggleMenu: function() {
@@ -12,6 +13,9 @@ new Vue({
     closeMainMenu: function() {
       if(this.openNav)
         this.toggleMenu()
+    },
+    go: function(index) {
+      console.log(this.sections[index])
     }
   },
   mounted: function() {
@@ -20,5 +24,10 @@ new Vue({
     document.getElementById('nav-main-menu').addEventListener("click", function(e) {
       e.stopPropagation()
     }, false)
+
+    let self = this
+    setTimeout(function() {
+      self.toggleMenu()
+    }, 500)
   }
 })
