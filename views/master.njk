@@ -2,12 +2,13 @@
 <html lang="pt" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{{ title }}</title>
+    <title>{% block pageTitle %}{% endblock %}</title>
 
     <!-- EXTERNAL -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
     <link rel="stylesheet" href="/css/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="/css/geral.css">
@@ -16,7 +17,7 @@
     <script src="/js/vue.min.js" charset="utf-8"></script>
 
     <link rel="stylesheet" href="/css/home.css">
-    <script src="/js/vue/home.js" defer></script>
+    <script src="/js/vue/app.js" defer></script>
   </head>
   <body>
     <div id="app">
@@ -25,7 +26,7 @@
           <div id="menu-content-wrapper">
             <div id="menu-logo" @click="go(0)" title="Home page..."><img src="http://gabrielsilveira.com.br/imgs/logo_gs.png" alt="Logo Gabriel Silveira"></div>
             <a @click="go(1)">Profile</a>
-            <a @click="go(2)">What i do</a>
+            <a @click="go(2)">What I do</a>
             <a @click="go(3)">Recent works</a>
             <a @click="go(4)">Articles</a>
             <a @click="go(5)">Let’s have a chat</a>
@@ -33,6 +34,14 @@
               <h3>Contact</h3>
               <p><b>E-mail</b> hey@gabrielsilveira.co</p>
               <p><b>Whatsapp</b> +55 11 976-768-736</p>
+              <div id="dev-icons-bar">
+                <p>Developed with</p>
+                <i class="devicon-javascript-plain" title="Javascript"></i>
+                <i class="devicon-nodejs-plain" title="Node.js"></i>
+                <i class="devicon-express-original" title="Express"></i>
+                <i class="devicon-vuejs-plain-wordmark" title="Vue.js"></i>
+                <i class="devicon-mysql-plain" title="MySQL"></i>
+              </div>
             </div>
           </div>
         </nav>
@@ -44,7 +53,7 @@
         <i class="fab fa-google-plus-g"></i>
       </div>
 
-      <section id="home">
+      <section id="page-content">
         <div id="wrapper-hamburger" @click="toggleMenu()">
           <button id="hamburger-icon" class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
@@ -52,9 +61,8 @@
             </span>
           </button>
         </div>
-
-        <h1>full stack developer</h1>
-        <p id="main-text">Hello, my name is Gabriel Silveira. I'm a</p>
+        {% block content %}
+        {% endblock %}
       </section>
     </div>
   </body>

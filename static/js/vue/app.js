@@ -22,7 +22,7 @@ new Vue({
         this.toggleMenu()
     },
     go: function(index) {
-      console.log(this.sections[index])
+      window.location.href = `./${this.sections[index]}`
     }
   },
   mounted: function() {

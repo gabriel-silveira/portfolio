@@ -2,25 +2,17 @@ var express = require('express')
 var nunjucks = require('nunjucks')
 var app = express()
 
-const PATHS = {
-  templates: 'views',
-  statics: 'static'
-}
-
 // arquivos estáticos
-app.use(express.static(PATHS.statics))
+app.use(express.static('static'))
 
 // templates
-nunjucks.configure(PATHS.templates, {
+nunjucks.configure('views', {
   autoescape: true,
   express: app
 })
 
-app.get('/', (req, res) => {
-  res.render('./index.html', {
-    title: 'Gabriel Silveira, Full stack developer'
-  })
-})
+app.get('/', (req, res) => res.render('home.njk'))
+app.get('/:page', (req, res) => res.render(`${req.params.page}.njk`))
 
 const port = 21020
 app.listen(port, function () {
