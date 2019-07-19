@@ -22,12 +22,19 @@
     <div id="app">
       <div id="main-menu" :class="{ active: openNav }">
         <nav id="nav-main-menu">
-          <div id="menu-logo"></div>
-          <a @click="go(0)">Profile</a>
-          <a @click="go(1)">What i do</a>
-          <a @click="go(2)">Recent works</a>
-          <a @click="go(3)">Articles</a>
-          <a @click="go(4)">Let’s have a chat</a>
+          <div id="menu-content-wrapper">
+            <div id="menu-logo" @click="go(0)" title="Home page..."><img src="http://gabrielsilveira.com.br/imgs/logo_gs.png" alt="Logo Gabriel Silveira"></div>
+            <a @click="go(1)">Profile</a>
+            <a @click="go(2)">What i do</a>
+            <a @click="go(3)">Recent works</a>
+            <a @click="go(4)">Articles</a>
+            <a @click="go(5)">Let’s have a chat</a>
+            <div id="menu-footer">
+              <h3>Contact</h3>
+              <p><b>E-mail</b> hey@gabrielsilveira.co</p>
+              <p><b>Whatsapp</b> +55 11 976-768-736</p>
+            </div>
+          </div>
         </nav>
       </div>
 

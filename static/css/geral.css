@@ -3,6 +3,7 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
@@ -12,7 +13,13 @@
 body {
   background-color: #FFF;
 }
-
+h3 {
+  padding: 0px 0px 10px 0px;
+}
+p {
+  line-height: 150%;
+  padding: 0px 0px 5px 0px;
+}
 a {
   cursor: pointer;
 }
@@ -65,7 +72,7 @@ div#app {
   transition: all 0.5s;
 }
 #main-menu.active {
-  background-color: rgba(255,255,255,0.65);
+  background-color: rgba(255,255,255,0.75);
 }
 #nav-main-menu {
   z-index: 2;
@@ -80,20 +87,43 @@ div#app {
 #main-menu.active #nav-main-menu {
   right: 0px;
 }
+#menu-content-wrapper {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
 #nav-main-menu #menu-logo {
-  height: 100px;
+  cursor: pointer;
+  padding: 14px;
+  height: 95px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 24px;
+  color: #FFF;
+  text-align: center;
+}
+#nav-main-menu #menu-logo img {
+  height: 70px;
 }
 #nav-main-menu a {
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 18px 15px;
   margin: 1px 0px;
   background-color: var(--purple);
   color: #FFF;
   transition: all 0.3s;
 }
 #nav-main-menu a:hover {
-  padding: 15px 15px 15px 25px;
+  padding-left: 25px;
   background-color: rgba(255,255,255,0.25);
   color: #FFF;
+}
+#nav-main-menu #menu-footer {
+  padding: 15px;
+  background-color: #000;
+  color: #FFF;
+}
+#nav-main-menu #menu-footer p b {
+  display: inline-block;
+  width: 100px;
 }

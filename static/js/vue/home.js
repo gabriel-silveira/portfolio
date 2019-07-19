@@ -3,7 +3,14 @@ new Vue({
   el: '#app',
   data: {
     openNav: false,
-    sections: ['profile', 'what-i-do', 'recent-works', 'articles', 'contact']
+    sections: [
+      '',
+      'profile',
+      'what-i-do',
+      'recent-works',
+      'articles',
+      'contact'
+    ]
   },
   methods: {
     toggleMenu: function() {
