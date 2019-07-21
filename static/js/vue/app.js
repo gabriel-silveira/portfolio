@@ -31,10 +31,5 @@ new Vue({
     document.getElementById('nav-main-menu').addEventListener("click", function(e) {
       e.stopPropagation()
     }, false)
-
-    let self = this
-    setTimeout(function() {
-      self.toggleMenu()
-    }, 500)
   }
 })

@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>{% block pageTitle %}{% endblock %}</title>
+    <link rel="icon" href="http://gabrielsilveira.com.br/imgs/logo_gs_favicon.png" sizes="16x16">
 
     <!-- EXTERNAL -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -18,6 +19,8 @@
 
     <link rel="stylesheet" href="/css/home.css">
     <script src="/js/vue/app.js" defer></script>
+
+{% block scripts %}{% endblock %}
   </head>
   <body>
     <div id="app">
@@ -32,7 +35,7 @@
             <a @click="go(5)">Let’s have a chat</a>
             <div id="menu-footer">
               <h3>Contact</h3>
-              <p><b>E-mail</b> hey@gabrielsilveira.co</p>
+              <p><b>E-mail</b> hello@gabrielsilveira.co</p>
               <p><b>Whatsapp</b> +55 11 976-768-736</p>
               <div id="dev-icons-bar">
                 <p>Developed with</p>
