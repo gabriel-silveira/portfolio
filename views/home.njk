@@ -1,10 +1,20 @@
 {% extends 'master.njk' %}
 
-{% block pageTitle %}Gabriel Silveira, Full stack developer{% endblock %}
+{% block pageTitle %}{{ title }}{% endblock %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="/css/home.css">
+{% endblock %}
 
 {% block content %}
         <div class="content-wrapper">
-          <h1 id="home-title">full stack developer</h1>
-          <p id="main-text">Hello, my name is Gabriel Silveira. I'm a</p>
+          {% if text[2] %}
+          <h1 id="home-title--pt-br">{{ text[1] }}</h1>
+          <h2>{{ text[2] }}</h2>
+          <p id="main-text">{{ text[0] }}</p>
+          {% else %}
+          <h1 id="home-title">{{ text[1] }}</h1>
+          <p id="main-text">{{ text[0] }}</p>
+          {% endif %}
         </div>
 {% endblock %}
