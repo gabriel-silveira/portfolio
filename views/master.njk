@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/hamburgers.min.css">
 
     <script src="/js/vue.min.js" charset="utf-8"></script>
+    <script src="/js/axios.min.js" charset="utf-8"></script>
 
     <script src="/js/vue/app.js" defer></script>
 
@@ -25,19 +26,19 @@
     <div id="app">
       <div id="main-menu" :class="{ active: openNav }">
         <nav id="nav-main-menu">
-          <div id="menu-content-wrapper">
+          <div id="menu-content-wrapper" v-if="sections">
             <div id="menu-logo" @click="go(0)" title="Home page..."><img src="http://gabrielsilveira.com.br/imgs/logo_gs.png" alt="Logo Gabriel Silveira"></div>
-            <a @click="go(1)">Profile</a>
-            <a @click="go(2)">What I do</a>
-            <a @click="go(3)">Recent works</a>
-            <a @click="go(4)">Articles</a>
-            <a @click="go(5)">Let’s have a chat</a>
+            <a @click="go(1)">[[ getMenuItemText(1) ]]</a>
+            <a @click="go(2)">[[ getMenuItemText(2) ]]</a>
+            <a @click="go(3)">[[ getMenuItemText(3) ]]</a>
+            <a @click="go(4)">[[ getMenuItemText(4) ]]</a>
+            <a @click="go(5)">[[ getMenuItemText(5) ]]</a>
             <div id="menu-footer">
-              <h3>Contact</h3>
+              <h3>[[ texts.title ]]</h3>
               <p><b>E-mail</b> hello@gabrielsilveira.co</p>
               <p><b>Whatsapp</b> +55 11 976-768-736</p>
               <div id="dev-icons-bar">
-                <p>Developed with</p>
+                <p>[[ texts.dev_with ]]</p>
                 <i class="devicon-javascript-plain" title="Javascript"></i>
                 <i class="devicon-nodejs-plain" title="Node.js"></i>
                 <i class="devicon-express-original" title="Express"></i>
