@@ -1,3 +1,13 @@
+
+section#page-content .content-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/imgs/background.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
 #profile {
     position: absolute;
     width: 900px;
@@ -5,7 +15,7 @@
     top: 50%;
     left: 50%;
     margin-left: -450px;
-    margin-top: -240px;
+    margin-top: -220px;
     text-align: center;
 }
 #profile h1 {
