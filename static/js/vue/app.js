@@ -2,7 +2,7 @@ new Vue({
   delimiters: ['[[',']]'],
   el: '#app',
   data: {
-    URI: 'http://localhost:21020/api/',
+    URI: '/api/',
     openNav: false,
     sections: false,
     texts: false
