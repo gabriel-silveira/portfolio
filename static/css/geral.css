@@ -21,8 +21,8 @@ h1, h2, h3 {
   color: #FFF;
 }
 p {
-  line-height: 150%;
-  padding: 0px 0px 5px 0px;
+  line-height: 160%;
+  padding: 0px 0px 10px 0px;
 }
 a {
   cursor: pointer;
@@ -155,4 +155,12 @@ section#page-content {
   display: inline-block;
   margin: 0px 10px;
   font-size: 40px;
+}
+
+
+.purple-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(48, 64, 208), rgba(48, 64, 208, 0.0));
 }

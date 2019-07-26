@@ -16,13 +16,16 @@ module.exports = function(options) {
         ]
       },
       home: {
-        title: 'Gabriel Silveira, Full stack developer',
+        title: 'Gabriel Silveira, Desenvolvedor full stack',
         text: [
           "Olá, meu nome é Gabriel Silveira e sou",
           'desenvolvedor',
           'full stack'
         ],
         description: ''
+      },
+      profile: {
+        title: 'Perfil',
       }
     },
     'en': {
@@ -47,6 +50,9 @@ module.exports = function(options) {
           'full stack developer'
         ],
         description: ''
+      },
+      profile: {
+        title: 'Profile',
       }
     }
   }

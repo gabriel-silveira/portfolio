@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% block pageTitle %}{% endblock %}</title>
-    <link rel="icon" href="http://gabrielsilveira.com.br/imgs/logo_gs_favicon.png" sizes="16x16">
+    <link rel="icon" href="/imgs/logo_gs_favicon.png" sizes="16x16">
 
     <!-- EXTERNAL -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900,700" rel="stylesheet">
@@ -27,7 +27,7 @@
       <div id="main-menu" :class="{ active: openNav }">
         <nav id="nav-main-menu">
           <div id="menu-content-wrapper" v-if="sections">
-            <div id="menu-logo" @click="go(0)" title="Home page..."><img src="http://gabrielsilveira.com.br/imgs/logo_gs.png" alt="Logo Gabriel Silveira"></div>
+            <div id="menu-logo" @click="go(0)" title="Home page..."><img src="/imgs/logo_gs.png" alt="Logo Gabriel Silveira"></div>
             <a @click="go(1)">[[ getMenuItemText(1) ]]</a>
             <a @click="go(2)">[[ getMenuItemText(2) ]]</a>
             <a @click="go(3)">[[ getMenuItemText(3) ]]</a>
