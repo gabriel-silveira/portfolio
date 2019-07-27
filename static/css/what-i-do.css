@@ -5,5 +5,5 @@ section#page-content .content-wrapper {
   height: 100%;
   background: url('/imgs/backgrounds/what-i-do.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
 }

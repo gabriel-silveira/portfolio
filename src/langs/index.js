@@ -26,6 +26,9 @@ module.exports = function(options) {
       },
       profile: {
         title: 'Perfil',
+      },
+      'what-i-do': {
+        title: 'O que eu faço',
       }
     },
     'en': {
@@ -53,6 +56,9 @@ module.exports = function(options) {
       },
       profile: {
         title: 'Profile',
+      },
+      'what-i-do': {
+        title: 'What I do',
       }
     }
   }

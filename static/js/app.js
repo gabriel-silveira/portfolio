@@ -9,11 +9,21 @@ new Vue({
   },
   methods: {
     toggleMenu: function() {
-      document.getElementById('hamburger-icon').classList.toggle('is-active')
-      this.openNav = this.openNav ? false : true
-      if(this.openNav) setTimeout(function() {
-        console.log('Hide')
-      }, 1000)
+      let self = this
+      // exibe
+      if(!this.openNav) self.mm()
+
+      setTimeout(function() {
+        document.getElementById('hamburger-icon').classList.toggle('is-active')
+        self.openNav = self.openNav ? false : true
+
+        // oculta
+        if(!self.openNav) {
+          setTimeout(function() {
+            self.mm(true)
+          }, 750)
+        }
+      }, 50)
     },
     closeMainMenu: function() {
       if(this.openNav)
@@ -31,14 +41,21 @@ new Vue({
     },
     getMenuItemText: function(index) {
       return this.sections[index].text
+    },
+    mm: function(hide) {
+      document.getElementById('main-menu').style.display = hide ? 'none' : 'block'
     }
   },
   mounted: function() {
+    let mm = document.getElementById('main-menu')
     // cria evento click fora do menu (para fechar)
-    document.getElementById('main-menu').addEventListener("click", this.closeMainMenu)
+    mm.addEventListener("click", this.closeMainMenu)
     document.getElementById('nav-main-menu').addEventListener("click", function(e) {
       e.stopPropagation()
     }, false)
+
     this.getGeneralText()
+
+    this.mm(true)
   }
 })
