@@ -1,7 +1,6 @@
 var express = require('express')
 var nunjucks = require('nunjucks')
 var fs = require('fs')
-var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
 
 const lang = require('./src/langs')({ lang:'pt-br' })
 const menu = lang.general.menu
@@ -14,8 +13,6 @@ var app = express()
 
 // arquivos estáticos
 app.use(express.static('static'))
-// http -> https
-app.use(redirectToHTTPS([/localhost:(\d{4})/]))
 
 // templates
 nunjucks.configure('views', {
