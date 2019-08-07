@@ -1,6 +1,7 @@
 var express = require('express')
 var nunjucks = require('nunjucks')
 var fs = require('fs')
+var redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
 
 const lang = require('./src/langs')({ lang:'pt-br' })
 const menu = lang.general.menu
@@ -13,7 +14,8 @@ var app = express()
 
 // arquivos estáticos
 app.use(express.static('static'))
-app.use(checkHttps)
+// http -> https
+app.use(redirectToHTTPS([/localhost:(\d{4})/]))
 
 // templates
 nunjucks.configure('views', {
@@ -47,11 +49,3 @@ const port = 21020
 app.listen(port, function () {
   console.log(`Running on ${port}`)
 })
-
-
-// middleware para redicionar requisições http para https
-function checkHttps(req, res, next) {
-  if(!req.secure)
-    res.redirect(`https://${req.headers.host}${req.url}`)
-  next();
-};
