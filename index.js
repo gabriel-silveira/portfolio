@@ -13,6 +13,7 @@ var app = express()
 
 // arquivos estáticos
 app.use(express.static('static'))
+app.use(checkHttps)
 
 // templates
 nunjucks.configure('views', {
@@ -46,3 +47,11 @@ const port = 21020
 app.listen(port, function () {
   console.log(`Running on ${port}`)
 })
+
+
+// middleware para redicionar requisições http para https
+function checkHttps(req, res, next) {
+  if(!req.secure)
+    res.redirect(`https://${req.headers.host}${req.url}`)
+  next();
+};
