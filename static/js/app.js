@@ -44,7 +44,15 @@ new Vue({
     },
     mm: function(hide) {
       document.getElementById('main-menu').style.display = hide ? 'none' : 'block'
+    },
+    checkHttps: function() {
+      if (location.protocol != 'https:')
+        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
     }
+  },
+  beforeMount: function() {
+    // verifica se está no HTTPS
+    this.checkHttps();
   },
   mounted: function() {
     let mm = document.getElementById('main-menu')
