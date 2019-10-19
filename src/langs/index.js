@@ -9,7 +9,7 @@ module.exports = function (currentLang) {
         menu: [
           { path: '', text: 'Página inicial', 'home': 'home' },
           { path: 'perfil', text: 'Perfil', 'perfil': 'profile' },
-          { path: 'o-que-eu-faco', text: 'O que eu faço', 'o-que-eu-faco': 'what-i-do' },
+          { path: 'o-que-eu-faco', text: 'O que eu faço', 'o-que-eu-faco': 'what-do-i-do' },
           { path: 'trabalhos-recentes', text: 'Trabalhos recentes', 'trabalhos-recentes': 'recent-works' },
           { path: 'artigos', text: 'Artigos', 'artigos': 'articles' },
           { path: 'contato', text: 'Contato', 'contato': 'contact' },
