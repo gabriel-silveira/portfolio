@@ -4,9 +4,7 @@
   "description": "Website do profissional Gabriel Silveira, Full stack developer",
   "main": "index.js",
   "scripts": {
-    "dev": "pm2 start index.js --watch",
-    "stop": "pm2 stop index.js",
-    "monitor": "pm2 monit",
+    "start": "nodemon -e js,html,nj index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,10 +19,13 @@
   "homepage": "https://github.com/gabriel-silveira/portfolio#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^1.19.4",
     "nunjucks": "^3.2.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
-    "pm2": "^3.5.1"
+    "eslint": "^6.5.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "vue-eslint-parser": "^6.0.4"
   }
 }

@@ -40,6 +40,33 @@ div#app {
   height: 100%;
 }
 
+#page-transition {
+  z-index: 99999;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 0%;
+  background-color: #180024;
+  opacity: 0.0;
+
+  /* For Safari 3.1 to 6.0 */
+  -webkit-transition-property: height, opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-delay: 1s;
+  /* Standard syntax */
+  transition-property: height, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s;
+}
+
+#page-transition.full {
+  height: 100%;
+  opacity: 1.0;
+}
+
 #social {
   z-index: 3;
   position: absolute;
@@ -163,4 +190,22 @@ section#page-content {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgb(48, 64, 208), rgba(48, 64, 208, 0.0));
+}
+
+#langs {
+  z-index: 1000;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: auto;
+  height: 70px;
+}
+#langs > span {
+  cursor: pointer;
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+#langs img {
+  height: 40px;
 }

@@ -24,6 +24,7 @@
   </head>
   <body>
     <div id="app">
+      <div id="page-transition" class="full"></div>
       <div id="main-menu" :class="{ active: openNav }">
         <nav id="nav-main-menu">
           <div id="menu-content-wrapper" v-if="sections">
@@ -67,6 +68,11 @@
         {% block content %}
         {% endblock %}
       </section>
+
+      <div id="langs">
+        <span @click="getGeneralText('pt-br')"><img src="/imgs/flags/pt-br.png" /></span>
+        <span @click="getGeneralText('en')"><img src="/imgs/flags/en.png" /></span>
+      </div>
     </div>
   </body>
 </html>
