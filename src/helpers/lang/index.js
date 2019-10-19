@@ -8,11 +8,11 @@ const pageLangs = {
   artigos: langs[0],
   contato: langs[0],
 
-  profile: langs[0],
-  "what-do-i-do": langs[0],
-  "recent-works": langs[0],
-  articles: langs[0],
-  contact: langs[0],
+  profile: langs[1],
+  "what-do-i-do": langs[1],
+  "recent-works": langs[1],
+  articles: langs[1],
+  contact: langs[1],
 };
 
 module.exports = function (options) {

@@ -13,8 +13,7 @@ nunjucks.configure('views', {
 });
 
 // rotas de VIEWS (frontend)
-const viewRoutes = require('./src/routes/views');
-app.use('/', viewRoutes());
+app.use('/', require('./src/routes/views'));
 
 // rotas de API (backend)
 app.use('/api', require('./src/routes/api'));

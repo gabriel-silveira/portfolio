@@ -7,7 +7,7 @@ router.get('/', function (req, res) {
 // obter texto gerais (.general)
 router.get('/texts/general/:lang', function (req, res) {
   // de acordo com o idioma...
-  const { general, } = require('../langs/index')(req.params.lang);
+  const { general } = require('../langs/index')(req.params.lang);
   res.json(general);
 });
 
